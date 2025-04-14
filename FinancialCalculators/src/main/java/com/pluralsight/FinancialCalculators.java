@@ -31,7 +31,7 @@ public class FinancialCalculators {
             // i = interest_Rate / 12;
 
             System.out.printf("Your expected monthly payment is: %.2f%n", monthlyPay);
-            System.out.printf("Your total interest paid is: %.2f%n", totalInterest);
+            System.out.printf("\nYour total interest paid is: %.2f%n", totalInterest);
 
 
         } else if (calc == 2){
@@ -49,7 +49,7 @@ public class FinancialCalculators {
             double totalInterest = futureValue - P;
 
             System.out.printf("The future value of this CD is: $%.2f ", futureValue);
-            System.out.printf("The total interest on the CD is: $%.2f ", totalInterest);
+            System.out.printf("\nThe total interest on the CD is: $%.2f ", totalInterest);
 
 /*• Calculator 3: A calculator that determines the present value of an
 ordinary annuity. (Note: this is difficult)
@@ -80,7 +80,7 @@ PV = P x 1 - (1 + r)^n/ r
             int months = yrs * 12; //n
             double PV = monthlyPayout * (1 - Math.pow(1 + r, -months)) / r;
 
-            System.out.printf("The present value of your annuity is: $%.2f" , PV);
+            System.out.printf("\nThe present value of your annuity is: $%.2f" , PV);
 
 
 
