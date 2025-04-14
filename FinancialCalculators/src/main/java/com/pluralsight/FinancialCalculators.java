@@ -51,10 +51,39 @@ public class FinancialCalculators {
             System.out.printf("The future value of this CD is: $%.2f ", futureValue);
             System.out.printf("The total interest on the CD is: $%.2f ", totalInterest);
 
+/*• Calculator 3: A calculator that determines the present value of an
+ordinary annuity. (Note: this is difficult)
+a. It would accept the monthly payout, expected interest rate,
+and years to pay out from the user
+b. It would display the present value of that annuity
+Example: To fund an annuity that pays $3,000 monthly for 20
+years and earns an expected 2.5% interest, you would need to
+invest $566,141.46 today.
+NOTE: If your results on any of these calculators are off by a
+few pennies (not dollars!), don't worry. The difference is likely
+attributable to rounding and we aren't that concerned about it
+in this academy.
 
+PV = P x 1 - (1 + r)^n/ r
+*/
 
         } else if (calc == 3){
             System.out.println("Thanks for using our Present Value Annuity Calculator.");
+            System.out.print("What is your monthly payout? Enter it here: ");
+            double monthlyPayout = keyboard.nextDouble();
+            System.out.print("What is your expected interest rate (in %)? Enter it here: ");
+            double eIntRate = keyboard.nextDouble();
+            System.out.print("What is your years to pay out? Enter it here: ");
+            int yrs = keyboard.nextInt();
+
+            double r = (eIntRate / 100) / 12; //r
+            int months = yrs * 12; //n
+            double PV = monthlyPayout * (1 - Math.pow(1 + r, -months)) / r;
+
+            System.out.printf("The present value of your annuity is: $%.2f" , PV);
+
+
+
         } else {
             System.out.println("The option you've chosen is invalid. Restart application.");
         }
